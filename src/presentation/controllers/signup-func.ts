@@ -1,6 +1,6 @@
-import { httpRequest, httpResponse } from '../protocols/http'
+import { HttpRequest, HttpResponse } from '../protocols/http'
 
-export const SignUpController = (httpRequest: httpRequest): httpResponse => {
+export const SignUpController = (httpRequest: HttpRequest): HttpResponse => {
   const { name, email } = httpRequest.body
 
   if (!name) {
