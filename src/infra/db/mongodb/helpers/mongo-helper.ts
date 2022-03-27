@@ -1,7 +1,7 @@
 import { Collection, MongoClient } from 'mongodb'
 
 class MongoHelper {
-  client: MongoClient
+  private client: MongoClient
 
   async connect (uri: string): Promise<void> {
     this.client = await MongoClient.connect(uri, {
