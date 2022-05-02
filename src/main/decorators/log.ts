@@ -11,11 +11,6 @@ export class LogControllerDecorator implements Controller {
       console.log('erro')
     }
 
-    // isso tem que quebrar em algum momento :thinking-face:
-    httpResponse.body = { thiago: true }
-
     return httpResponse
-
-    // return await Promise.resolve({ body: {}, statusCode: 200 })
   }
 }
