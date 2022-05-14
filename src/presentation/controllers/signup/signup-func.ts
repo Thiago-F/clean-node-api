@@ -1,9 +1,9 @@
-import { InvalidParamError } from '../errors/invalid-param-error'
-import { MissingParamError } from '../errors/missing-param-error'
-import { badRequest, ok, serverError } from '../helpers/http-helper'
-import { Controller } from '../protocols/controller'
-import { EmailValidator } from '../protocols/email-validator'
-import { HttpRequest, HttpResponse } from '../protocols/http'
+import { InvalidParamError } from '../../errors/invalid-param-error'
+import { MissingParamError } from '../../errors/missing-param-error'
+import { badRequest, ok, serverError } from '../../helpers/http-helper'
+import { Controller } from '../../protocols/controller'
+import { EmailValidator } from '../../protocols/email-validator'
+import { HttpRequest, HttpResponse } from '../../protocols/http'
 import { AddAccount } from './signup-protocols'
 
 export const SignUpController = (
@@ -36,7 +36,7 @@ export const SignUpController = (
 
       return ok(account)
     } catch (error) {
-      return serverError()
+      return serverError(error)
     }
   }
 })
