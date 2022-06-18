@@ -4,7 +4,7 @@ import { badRequest, ok, serverError } from '../../helpers/http/http-helper'
 import { Controller } from '../../protocols/controller'
 import { EmailValidator } from '../../protocols/email-validator'
 import { HttpRequest, HttpResponse } from '../../protocols/http'
-import { AddAccount } from './signup-protocols'
+import { AddAccount } from './signup-controller-protocols'
 
 export const SignUpController = (
   emailValidator: EmailValidator,
